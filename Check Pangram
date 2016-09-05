@@ -1,0 +1,26 @@
+	import java.util.Scanner;
+	
+public class CheckPangram{
+	  public static void main(String[] args){
+	    Scanner sc = new Scanner(System.in);
+		  System.out.println("enter the string");
+		  String s = sc.nextLine();
+      sc.close();
+      Boolean result = pangram(s);
+      System.out.println(result);
+  }
+	public static boolean pangram(String s){
+		boolean isPangram = true;
+		String alphabate = "abcdefghijklmnopqrstuvwxyz";
+		for(int i=0 ; i<alphabate.length() ; i++){
+			if(s.toLowerCase().contains(Character.toString(alph[i])))
+				continue;
+			else
+			{
+				isPangram = false;
+				break;
+			}
+		}
+		return isPangram;
+	}
+}
